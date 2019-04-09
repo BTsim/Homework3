@@ -13,6 +13,12 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P1_9_NumbersAddition()
         {
+            Console.WriteLine("Enter first number");
+            double number1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            double number2 = Convert.ToDouble(Console.ReadLine());
+            var summ = number1 + number2;
+            Console.WriteLine(number1+"+"+number2+"="+summ);
 
         }
 
@@ -23,7 +29,21 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P2_9_CheckResultAddition()
         {
-
+            Console.WriteLine("Enter first number");
+            double number1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            double number2 = Convert.ToDouble(Console.ReadLine());
+            var summ = number1 + number2;
+            Console.WriteLine("Enter the answer");
+            double answer = Convert.ToDouble(Console.ReadLine());
+            if (answer == summ)
+            {
+                Console.WriteLine("Answer is wright");
+            }
+            else
+            {
+                Console.WriteLine("Answer is wrong, wright answer is "+summ);
+            }
         }
 
         /// <summary>
@@ -33,6 +53,25 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P3_9_CheckResultAdditionWithTips()
         {
+            Console.WriteLine("Enter first number");
+            double number1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            double number2 = Convert.ToDouble(Console.ReadLine());
+            var summ = number1 + number2;
+            Console.WriteLine("Enter the answer");
+            double answer = Convert.ToDouble(Console.ReadLine());
+            if (answer == summ)
+            {
+                Console.WriteLine("Answer is wright");
+            }
+            else if (answer < summ)
+            {
+                Console.WriteLine("Answer is wrong, wright answer is bigger");
+            }
+            else
+            {
+                Console.WriteLine("Answer is wrong, wright answer is less");
+            }
 
         }
 
@@ -42,6 +81,35 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P4_9_CheckResultWithOperator()
         {
+            Console.WriteLine("Enter first number");
+            double number1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            double number2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter operator (+ or -)");
+            string oper = Console.ReadLine();
+            double summ;
+            if (oper == "-")
+            {
+                summ = number1 - number2;
+            }
+            else
+            {
+                summ = number1 + number2;
+            }
+            Console.WriteLine("Enter the answer");
+            double answer = Convert.ToDouble(Console.ReadLine());
+            if (answer == summ)
+            {
+                Console.WriteLine("Answer is wright");
+            }
+            else if (answer < summ)
+            {
+                Console.WriteLine("Answer is wrong, wright answer is bigger");
+            }
+            else
+            {
+                Console.WriteLine("Answer is wrong, wright answer is less");
+            }
 
         }
 
@@ -51,7 +119,43 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P5_9_CheckResultWithAttemps()
         {
+            Console.WriteLine("Enter first number");
+            double number1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            double number2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter operator (+ or -)");
+            string oper = Console.ReadLine();
+            double summ;
+            if (oper == "-")
+            {
+                summ = number1 - number2;
+            }
+            else
+            {
+                summ = number1 + number2;
+            }
+            int i = 0;
+            while (i < 3)
+            {
+                Console.WriteLine("Enter the answer");
+                double answer = Convert.ToDouble(Console.ReadLine());
+                if (answer == summ)
+                {
+                    Console.WriteLine("Answer is wright");
+                    i = 3;
+                }
+                else if (answer < summ)
+                {
+                    Console.WriteLine("Answer is wrong, wright answer is bigger");
+                    i++;
+                }
+                else
+                {
+                    Console.WriteLine("Answer is wrong, wright answer is less");
+                    i++;
+                }
 
+            }
         }
 
         /// <summary>
@@ -60,6 +164,53 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P6_9_FiveNumbersAddition()
         {
+            double summ=0;
+            string oper="+";
+            int i = 0;
+            Console.WriteLine("Enter " +1+ " number");
+            double number = Convert.ToDouble(Console.ReadLine());
+            summ = number;
+            for (i = 0; i < 4; i++)
+            {
+                if (i < 4)
+                {
+                    Console.WriteLine("Enter " + (i + 1) + " operator (+ or -)");
+                    oper = Console.ReadLine();
+                }
+                Console.WriteLine("Enter "+(i+2)+" number");
+                number = Convert.ToDouble(Console.ReadLine());
+                if (oper == "-")
+                {
+                    summ -=number;
+                }
+                else
+                {
+                    summ += number;
+                }
+            }
+            i = 0;
+            while (i < 3)
+            {
+                Console.WriteLine("Enter the answer");
+                double answer = Convert.ToDouble(Console.ReadLine());
+                if (answer == summ)
+                {
+                    Console.WriteLine("Answer is wright");
+                    i=3;
+                }
+                else if (answer < summ)
+                {
+                    Console.WriteLine("Answer is wrong, wright answer is bigger");
+                    i++;
+                }
+                else
+                {
+                    Console.WriteLine("Answer is wrong, wright answer is less");
+                    i++;
+                }
+
+            }
+
 
         }
 
@@ -69,7 +220,7 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P7_9_NumbersResultWithInfoIfCorrect()
         {
-
+            //Вывод и правильности решения задачи реализован во всех предыдущих алгоритмах, где требовалось ввести решение самостоятельно
         }
 
         /// <summary>
